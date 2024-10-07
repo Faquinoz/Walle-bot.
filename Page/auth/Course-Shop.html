@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../Content/Img/logo.png" type="image/x-icon">
+    <title>Wallbot</title>
+    <link rel="stylesheet" href="../../Content/css/auth.css">
+</head>
+
+<body>
+    <h1>Wallbot</h1>
+
+    <div class="Pn">
+        <div class="Panel Pan-select" id="frm-select">
+            <h2>VENDEMOS O AGRUPAMOS CURSOS</h2>
+
+            <form>
+                <div>
+                    <label for="tip">Tipo: </label>
+                    <select id="tip" required onchange="mostrarFormulario()">
+                        <option value="">Selecciona una opción</option>
+                        <option value="venta">Venta</option>
+                        <option value="curso">Grupo</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <div class="Panel" id="frm-insert-shop">
+            <h2>Venta de curso</h2>
+            <form>
+                <div>
+                    <label for="niv">Nivel: </label>
+                    <select id="niv" required>
+                        <option value="">Selecciona el nivel</option>
+                        <option value="junior">Junior</option>
+                        <option value="teens">Teens</option>
+                        <option value="adults">Adults</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="cur">Curso: </label>
+                    <input type="text" id="cur" placeholder="Descripción" required>
+                </div>
+
+                <div>
+                    <label for="pre">Presentación: </label>
+                    <input type="file" id="pre" accept="image/*" required>
+                </div>
+
+                <div>
+                    <label for="fra">Frase de curso: </label>
+                    <input type="text" id="fra" placeholder="Frase" required>
+                </div>
+
+                <div>
+                    <label for="con">Contenido: </label>
+                    <textarea rows="5" id="con" required></textarea>
+                </div>
+
+                <div>
+                    <label for="est">Estado: </label>
+                    <select id="est" required>
+                        <option value="">Selecciona un estado de venta</option>
+                        <option value="prom">Con Promoción</option>
+                        <option value="nprom">Sin Promoción</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="precio">Precio: </label>
+                    <input type="number" id="precio" placeholder="00.00" step="00.01" min="0" required>
+                </div>
+
+                <input type="submit" class="btn-registrar" value="Registrar">
+            </form>
+        </div>
+
+        <div class="Panel" id="frm-insert-course">
+            <h2>Agrupar Curso</h2>
+            <form>
+                <div>
+                    <label for="ni">Nivel: </label>
+                    <select id="ni" required>
+                        <option value="">Selecciona el nivel</option>
+                        <option value="junior">Junior</option>
+                        <option value="teens">Teens</option>
+                        <option value="adults">Adults</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="gru">Grupo: </label>
+                    <select id="gru" required>
+                        <option value="">Selecciona un grupo</option>
+                        <option value="html">HTML</option>
+                        <option value="js">JavaScript</option>
+                        <option value="css">CSS</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="curs">Aula: </label>
+                    <input type="text" id="curs" placeholder="Aula" required>
+                </div>
+
+                <div>
+                    <label for="cont">Contenido: </label>
+                    <textarea rows="5" id="cont" required></textarea>
+                </div>
+
+                <input type="submit" class="btn-registrar" value="Registrar">
+            </form>
+        </div>
+
+    </div>
+
+    <script src="../../Content/js/scriptServer.js"></script>
+</body>
+
+</html>

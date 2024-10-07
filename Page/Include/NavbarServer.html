@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../content/img/logo.png" type="image/x-icon">
+    <title>Wallbot</title>
+    <link rel="stylesheet" href="../../content/css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!--navbar Lateral para la interaccion del contenido-->
+    <nav class="navbar close">
+        <header>
+            <!--Imagen de Logo-->
+            <div class="logo">
+                <span class="image">
+                    <img src="../../content/img/logo.png" alt="logo">
+                </span>
+
+                <!--name de la Institucion-->
+                <div class="text-name">
+                    <span class="name">Wallbot</span>
+                </div>
+            </div>
+
+            <!--line de separacion-->
+            <div class="line"></div>
+
+            <!--Button Responsive-->
+            <i class="fa-solid fa-arrow-right btn_resp"></i>
+        </header>
+
+        <!--navbar Opciones-->
+        <div class="navbar-lateral">
+            <div class="lateral">
+                <ul class="navbar-enlace">
+                    <li class="navbar-opc">
+                        <a href="#" id="btn-informacion"><i class="fas fa-pager icon"></i>
+                            <span class="text">Información</span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-opc">
+                        <a href="#" id="btn-curso"><i class="fas fa-book icon"></i>
+                            <span class="text">Cursos</span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-opc">
+                        <a href="#" id="btn-usuarios"><i class="fas fa-users-cog icon"></i>
+                            <span class="text">Usuarios</span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-opc">
+                        <a href="#" id="btn-pagos"><i class="fas fa-money-bill-wave-alt icon"></i>
+                            <span class="text">Pagos</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cierra">
+                <li class="">
+                    <a href="#" id="btn-config"><i class="fas fa-info icon"></i>
+                        <span class="text">Acerca de</span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#" id="btn-salir"><i class="fas fa-sign-out-alt icon"></i>
+                        <span class="text">Cerrar Sesión</span>
+                    </a>
+                </li>
+
+            </div>
+        </div>
+    </nav>
+
+    <!--header top para el control de usuarios rapido-->
+    <header class="header-top">
+        <section class="header">
+            <div class="icons">
+                <div id="user-btn" class="fas fa-users-gear"></div>
+            </div>
+
+            <div class="profile">
+                <img src="../../content/img/user.png" class="img" alt="">
+                <h3 class="usuario">Admin</h3>
+                <p class="rol">administrador</p>
+                <a href="../auth/Profile-User.html" class="btn">Usuario</a>
+                <div class="flex-btn">
+                    <a href="../auth/Login.html" class="option-btn">Login</a>
+                    <a href="../auth/Register.html" class="option-btn">Registrar</a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!--Contenido de las interacciones-->
+    <section class="contenido" id="contenido-dinamico"></section>
+
+    <script src="../../Content/js/scriptServer.js"></script>
+</body>
+
+</html>

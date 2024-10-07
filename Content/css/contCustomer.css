@@ -1,0 +1,463 @@
+body{
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+
+/* ------------------- INCIO ------------------- */
+#Panel-Home{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../../Content/Img/bienvenidos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Panel-Home .fondo-contenido{
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+#Panel-Home .title{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#Panel-Home .parrafo{
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 20px 0;
+}
+
+#Panel-Home .text-contenido{
+    padding: 30px;
+    text-align: center;
+}
+
+#Panel-Home .btn-cuotas{
+    width: 80vh;
+    height: 50px;
+    font-size: 15px;
+    color: #FFF;
+    background: #1A0079;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    border: none;
+}
+
+#Panel-Home .btn-cuotas:hover{
+    transform: translateY(-5px) scale(1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------- MIS LOGROS  ------------------- */
+#Panel-Course-General h1{
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+
+}
+
+#Panel-Course{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#card{
+    width: 300px;
+    height: 350px;
+    position: relative;
+    margin: 35px;
+}
+
+#card .face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+#card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+#card .front img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+#card .front .title-gen{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, .4);
+    color: #C3C3C3;
+    background: #000;
+    padding: 10px;
+}
+
+#card .front h3,
+#card .front h2 {
+    text-align: center;
+    line-height: normal;
+    font-weight: 500;
+}
+
+#card .title-course {
+    font-size: 25px;
+}
+
+#card .title-doc-course {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+#card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+#card .back .link{
+    height: 50px;
+    border-top: solid 1px #F3F3F3;
+    line-height: 50px;
+}
+
+#card .back .link a{
+    color: #F3F3F3;
+    text-decoration: none;
+}
+
+#card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+#card .back p{
+    letter-spacing: 1px;
+}
+
+#card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+#card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* ------------------- TIENDA ------------------- */
+#Panel-Shop-Customer,
+#Panel-Course-Customer{
+    width: 100%;
+    max-width: 1220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+#Panel-General-Customer .title-contenido{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#Panel-General-Customer .Panel_Presentacion{
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#Panel-General-Customer .Panel_Presentacion:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+#Panel-General-Customer .Panel_Presentacion img{
+    width: 18%;
+    margin: 10px -200px 0 35px;
+}
+
+#Panel-General-Customer .Panel_Presentacion .titulo{
+    width: 20%;
+    margin-left: 30px;
+}
+
+#Panel-General-Customer .Panel_Presentacion .titulo h1{
+    font-size: 20px;
+}
+
+#Panel-General-Customer .Panel_Presentacion .titulo p{
+    padding: 0 12px;
+    color: #7a7a7a;
+    line-height: 2;
+    border: 2px solid #d7d7d7;
+    border-radius: 99px;
+    margin-bottom: 10px;
+}
+
+#Panel-General-Customer .Panel_Presentacion .contenido{
+    width: 52%;
+    height: 100%;
+    margin-left: 20px;
+}
+
+#Panel-General-Customer .Panel_Presentacion .contenido h3{
+    margin: 15px 0;
+    font-weight: bold;
+    text-align: justify;
+}
+
+#Panel-General-Customer .Panel_Presentacion .contenido p{
+    line-height: 1.5;
+    color: #5a5a5a;
+    text-align: justify;
+    font-style: italic;
+}
+
+#Panel-General-Customer .Panel_Presentacion .contenido p::before{
+    position: absolute;
+    color: #5a5a5a;
+}
+
+#Panel-General-Customer .Panel_Presentacion a{
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 0;
+    color: #fff;
+    background-color: #1A0079;
+    border-radius: 20px;
+    transition: all 400ms ease;
+}
+
+#Panel-General-Customer .Panel_Presentacion a:hover{
+    background: #0c0038;
+    color: #FFF;
+}
+
+#Panel-General-Customer .shop{
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 400px;
+    text-align: center;
+}
+
+#Panel-General-Customer .container_p{
+    margin-left: 45px;
+    margin-top: 20px;
+}
+
+#poceder_pago{
+    margin-top: 15px;
+    background-color: #1A0079;
+    color: #FFF;
+}
+
+#poceder_pago:hover{
+    background-color: #eeff03;
+    color: #000;
+    font-weight: bold;
+}
+
+#Panel-General-Customer .product{
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+#Panel-General-Customer .total{
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+#Panel-General-Customer input[type="submit"]{
+    background-color: #1A0079;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 20px 0 0 0;
+}
+
+#Panel-General-Customer .payment-methods{
+    margin-top: 30px;
+}
+
+#Panel-General-Customer .payment-methods form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#Panel-General-Customer .payment-methods label{
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+#Panel-General-Customer .payment-methods input{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+#Panel-General-Customer .payment-methods input:focus{
+    border-color: #1A0079;
+    outline: none;
+}
+
+#Panel-General-Customer .payment-methods button:hover{
+    background-color: #0c0038;
+}
+
+#Panel-General-Customer .payment-methods button:active{
+    transform: scale(0.98);
+}
+
+#Panel-General-Customer .payment-methods input{
+    margin-bottom: 10px;
+}
+
+#Panel-General-Customer button{
+    background-color: #1A0079;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#Panel-General-Customer img{
+    padding: 10px;
+}
+
+#payment-methods{
+    display: none;
+}
+
+/* ------------------- Informacion Curso ------------------- */
+.contenedor{
+    margin-top: 80px;
+    width: 150px;
+    margin-left: 400px;
+}
+
+#btnd{
+    width: 800px;
+    height: 120px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 400ms ease;
+    margin-top: 50px;
+}
+
+.sesion{
+    font-size: 35px;
+    color: #000;
+}
+
+#btnd:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.dropdown{
+    width: 798px;
+    height: 120px;
+    background-color: white;
+    border: 1.9px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 9px;
+}
+
+#dropdownVisual1{
+    display: none;
+}
+
+/* ------------------- Extras ------------------- */
+.Panel-General-Server .Opc {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Panel-General-Server .Opc i{
+    padding: 10px;
+}
+
+.Panel-General-Server .Opc a{
+    text-decoration: none;
+    color: #1A0079;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #000;
+    font-size: 20px;
+}
+
+.Panel-General-Server .Opc a:hover{
+    color: #fff;
+    border: none;
+    background: #1A0079;
+}
+
+/* RESPONSIVE */
+@media (max-width: 0) {}

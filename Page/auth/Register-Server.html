@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../Content/Img/logo.png" type="image/x-icon">
+    <title>Wallbot</title>
+    <link rel="stylesheet" href="../../Content/css/auth.css">
+</head>
+
+<body>
+    <h1>Wallbot</h1>
+
+    <div class="Pn">
+        <div class="Panel Pan-select" id="frm-select">
+            <h2>USUARIO</h2>
+
+            <form>
+                <div>
+                    <label for="doc">Documento: </label>
+                    <select id="doc" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="dni">DNI</option>
+                        <option value="car">Carnet de Extranjeria</option>
+                        <option value="otr">Otros</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="doni">DNI: </label>
+                    <input type="number" id="doni" placeholder="Documento de Identidad" required>
+                </div>
+
+                <div>
+                    <label for="nom-ape">Nombres y Apellidos: </label>
+                    <input type="text" id="nom-ape" placeholder="Nombres y apellidos completos" required>
+                </div>
+
+                <div>
+                    <label for="tele">Telefono: </label>
+                    <input type="tel" id="tele" placeholder="Celular o Telefono" required>
+                </div>
+
+                <div>
+                    <label for="mail">Correo Electrónico: </label>
+                    <input type="email" id="mail" placeholder="Gmail" required>
+                </div>
+
+                <div>
+                    <label for="pas">Contraseña: </label>
+                    <input type="password" id="pas" placeholder="Contraseña" required>
+                </div>
+
+                <div>
+                    <label for="tip">Permisos: </label>
+                    <select id="tip" required onchange="mostrarFormulario()">
+                        <option value="">Selecciona una opción</option>
+                        <option value="admin">Admin</option>
+                        <option value="subadmin">Sub-Admin</option>
+                        <option value="docente">Docente</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <div class="Panel" id="frm-insert-admin">
+            <h2>Administrador</h2>
+            <form>
+                <div>
+                    <label for="per">Permisos: </label>
+                    <select id="per" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="gu">Gestión de cuentas</option>
+                        <option value="gc">Gestión de cursos</option>
+                        <option value="gf">Gestión de finanzas</option>
+                        <option value="gc">Gestión de contenido</option>
+                        <option value="gs">Gestión del sistema</option>
+                    </select>
+                </div>
+
+                <input type="submit" class="btn-registrar" value="Registrar">
+            </form>
+        </div>
+
+        <div class="Panel" id="frm-insert-subadmin">
+            <h2>Sub - Administrador</h2>
+            <form>
+                <div>
+                    <label for="per">Permisos: </label>
+                    <select id="per" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="gu">Gestión de cuentas</option>
+                        <option value="gc">Gestión de cursos</option>
+                        <option value="gf">Gestión de finanzas</option>
+                        <option value="gc">Gestión de contenido</option>
+                        <option value="gs">Gestión del sistema</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="aut">Autorización: </label>
+                    <select id="aut" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="insert">Agregar</option>
+                        <option value="update">Editar</option>
+                        <option value="delete">Eliminar</option>
+                        <option value="all">Todo</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="sup">Supervisor: </label>
+                    <select id="sup" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="az">Aquino Zegarra</option>
+                        <option value="bg">Bonifacio Garcia</option>
+                        <option value="ig">Inga Quintana</option>
+                        <option value="ta">Torres Astorga</option>
+                    </select>
+                </div>
+
+                <input type="submit" class="btn-registrar" value="Registrar">
+            </form>
+        </div>
+
+        <div class="Panel" id="frm-insert-docente">
+            <h2>DOCENTE</h2>
+            <form>
+                <div>
+                    <label for="especialidad">Especialidad:</label>
+                    <input type="text" id="especialidad" placeholder="Área de enseñanza" required>
+                </div>
+
+                <div>
+                    <label for="gru">Grupo: </label>
+                    <select id="gru" required>
+                        <option value="">Selecciona un grupo</option>
+                        <option value="html">HTML</option>
+                        <option value="js">JavaScript</option>
+                        <option value="css">CSS</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="aul">Aulas:</label>
+                    <select id="aul" name="aul[]" multiple required>
+                        <option value="aul1">Aula 315</option>
+                        <option value="aul2">Aula 316</option>
+                        <option value="aul3">Aula 317</option>
+                        <option value="aul4">Aula 318</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="hor">Horario:</label>
+                    <input type="text" id="hor" name="hor" placeholder="Lunes a Viernes, 10:00 - 14:00">
+                </div>
+
+                <div>
+                    <label for="redes_sociales">Folder:</label>
+                    <input type="text" id="redes_sociales" name="redes_sociales"
+                        placeholder="Ejemplo: https://linkedin.com/in/tu-perfil">
+                </div>
+
+                <input type="submit" class="btn-registrar" value="Registrar">
+            </form>
+        </div>
+
+    </div>
+
+    <script src="../../Content/js/scriptServer.js"></script>
+</body>
+
+</html>

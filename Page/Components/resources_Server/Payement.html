@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../Content/css/contServer.css">
+</head>
+
+<body>
+    <div class="Panel">
+        <div class="Panel-Presentacion-Pago">
+            <div class="titulo-Pago">
+                <figure><img src="../../../Content/Img/pagos.png"></figure>
+                <div class="texto-pago">
+                    <h1>Gestionador de Pagos</h1>
+                </div>
+            </div>
+
+            <div class="linea"></div>
+
+            <div class="contenido-Pago">
+                <form action="">
+                    <div class="form-grupo">
+                        <label for="alumno"><i class="fa fa-podcast"></i> Buscador:</label>
+                        <input type="number" placeholder="Documento de Identidad Nacional" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="alumno"><i class="fa fa-user"></i> Alumno:</label>
+                        <span>Yehinner - Nilton - Fabian - Julio</span>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="inst"><i class="fa fa-server"></i> Estado:</label>
+                        <select name="inst" id="inst" required>
+                            <option value="Wallbot">Pagado</option>
+                            <option value="Evabot">No Pagado</option>
+                        </select>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="inst"><i class="fa fa-server"></i> Tipo:</label>
+                        <select name="inst" id="inst" required>
+                            <option value="Wallbot">Becado</option>
+                            <option value="Evabot">No Becado</option>
+                        </select>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="inst"><i class="fa fa-dashboard"></i> Nivel:</label>
+                        <select name="inst" id="inst" required>
+                            <option value="Wallbot">Junior</option>
+                            <option value="Evabot">Teens</option>
+                            <option value="Evabot">Adults</option>
+                        </select>
+                    </div>
+                </form>
+
+                <div class="linea"></div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>DNI</th>
+                            <th>Alumno</th>
+                            <th>F. Pago</th>
+                            <th>Est. Pago</th>
+                            <th>Descripciòn</th>
+                            <th>Nivel</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>1</td>
+                            <td>Torres Astorga</td>
+                            <td>30/10/2024</td>
+                            <td>Pagado</td>
+                            <td>xxxxxxx</td>
+                            <td>Junior</td>
+                            <td>No Becado</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2</td>
+                            <td>Bonifacio Garcia</td>
+                            <td>30/10/2024</td>
+                            <td>No Pagado</td>
+                            <td>xxxxxxx</td>
+                            <td>Teens</td>
+                            <td>No Becado</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>3</td>
+                            <td>Aquino Zegarra</td>
+                            <td>30/10/2024</td>
+                            <td>Pagado</td>
+                            <td>xxxxxxx</td>
+                            <td>Junior</td>
+                            <td>Becado</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>4</td>
+                            <td>Inga Quintana</td>
+                            <td>30/10/2024</td>
+                            <td>Pagado</td>
+                            <td>xxxxxxx</td>
+                            <td>Adults</td>
+                            <td>Becado</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button class="btn-confirmacion">Buscar</button>
+                <button class="btn-confirmacion">Modificar</button>
+                <button class="btn-confirmacion">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+/* ------------------- General ------------------- */
+body{
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+
+/* ------------------- General ------------------- */
+#Panel-Information{
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../Img/img2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.Panel{
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#Panel-Information .Panel-Presentacion{
+    width: 300px;
+    height: 420px;
+    margin: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease;
+    background: #FFF;
+}
+
+#Panel-Information .title-contenido{
+    color: #FFF;
+    font-size: 40px;
+    margin: 30px 0 0 50px;
+}
+
+#Panel-Information .Panel-Presentacion:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+#Panel-Information .Panel-Presentacion .titulo-inicio{
+    padding: 15px;
+}
+
+#Panel-Information .Panel-Presentacion .titulo-inicio p{
+    padding: 10px;
+    margin-top: 20px;
+    line-height: 1.5;
+    font-style: italic;
+    border-radius: 20px;
+    border: 1px solid gray;
+}
+
+.Panel button, #btn-confirmacion{
+    width: 90%;
+    background: #1A0079;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px 0 0 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.Panel button:hover, #btn-confirmacion{
+    transform: translateY(-5px);
+    background: #0a0030;
+    font-weight: bold;
+}
+
+/* ------------------- Curso y Venta ------------------- */
+/*Se encuentra en el contCustomer.css "linea 87"*/
+
+/* ------------------- Gestionador de Usuarios ------------------- */
+.linea{
+    border-top: 1px solid black;
+    margin: 20px 0;
+}
+
+.titulo-Pago{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.titulo-Pago .texto-pago{
+    margin-left: 20px;
+}
+
+.titulo-Pago img{
+    max-width: 100px;
+    margin: -20px 0;
+    padding: 0;
+}
+
+.contenido-Pago{
+    text-align: left;
+}
+
+.form-grupo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-grupo label{
+    flex: 1;
+    color: #1A0079;
+    font-weight: bold;
+}
+
+.form-grupo input,
+.form-grupo select{
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus{
+    outline: none;
+    border-color: #1A0079;
+}
+
+.contenido-Pago table{
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.contenido-Pago th, td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th{
+    background-color: #f4f4f9;
+    color: #1e3b80;
+    font-weight: bold;
+}
+
+table tbody tr:hover{
+    background-color: #f4f4f9;
+}
+
+.btn-confirmacion, #btn-confirmacion{
+    padding: 10px;
+    margin: 20px 0;
+    color: #FFF;
+    background: #1A0079;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* ------------------- Mi Perfil -------------------*/
+.Profile{
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    margin: 20px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.Profile .title-MyProfile{
+    font-size: 30px;
+    margin: -60px 0 -30px 0;
+    padding: 0;
+}
+
+.Profile .profile-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #555;
+    cursor: pointer;
+}
+
+.Profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;
+}
+
+.Profile input,
+.Profile textarea,
+.Profile span{
+    width: calc(100% - 22px);
+    text-align: left;
+    display: block;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.Profile label{
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.Profile .btn-save{
+    display: none;
+}
+
+#file-input, #nom-ape, #doc, #mail, #estado-civil, #ciudad, #biografia, #frase, #default-initial{
+    display: none;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../Content/Img/logo.png" type="image/x-icon">
+    <title>Wallbot - Mi Perfil</title>
+    <link rel="stylesheet" href="../../Content/css/contServer.css">
+</head>
+
+<body>
+    <div class="Profile">
+        <div class="title-MyProfile">
+            <h1>Mi Perfil</h1>
+        </div>
+
+        <div class="profile-image" onclick="document.getElementById('file-input').click();">
+            <img id="profile-pic">
+        </div>
+        <input type="file" id="file-input" accept="image/*" onchange="cambiarImagen()">
+
+        <div>
+            <label for="nom-ape">Nombres y Apellidos</label>
+            <span id="nom-ape-display">Yehinner David Torres Astorga</span>
+            <input type="text" id="nom-ape" placeholder="Nombres y Apellidos" value="Juan Pérez">
+        </div>
+
+        <div>
+            <label for="doc">Documento de Identidad</label>
+            <span id="doc-display">12345678</span>
+            <input type="number" id="doc" placeholder="DNI" value="12345678">
+        </div>
+
+        <div>
+            <label for="mail">Correo Electrónico</label>
+            <span id="mail-display">ytorresas@ucvvirtual.edu.pe</span>
+            <input type="email" id="mail" placeholder="Correo Electrónico" value="juan.perez@example.com">
+        </div>
+
+        <div>
+            <label for="estado-civil">Estado Civil</label>
+            <span id="estado-civil-display">Comprometido</span>
+            <input type="text" id="estado-civil" placeholder="Estado Civil" value="Soltero">
+        </div>
+
+        <div>
+            <label for="ciudad">Ciudad</label>
+            <span id="ciudad-display">Ica</span>
+            <input type="text" id="ciudad" placeholder="Ciudad" value="Lima">
+        </div>
+
+        <div>
+            <label for="biografia">Biografía</label>
+            <span id="biografia-display">Gran soñador y complicar la vida de mi delegada.</span>
+            <textarea id="biografia" rows="5"
+                placeholder="Biografía">Gran soñador y complicar la vida de mi delegada.</textarea>
+        </div>
+
+        <div>
+            <label for="frase">Frase</label>
+            <span id="frase-display">"El conocimiento mata a la ignorancia."</span>
+            <input type="text" id="frase" placeholder="Frase que lo defina"
+                value="El conocimiento mata a la ignorancia.">
+        </div>
+
+        <button class="btn-edit" id="btn-confirmacion" onclick="editarPerfil()">Editar Perfil</button>
+        <button class="btn-save" id="btn-confirmacion" onclick="guardarPerfil()">Guardar Cambios</button>
+    </div>
+
+    <script src="../../Content/js/scriptServer.js"></script>
+</body>
+
+</html>

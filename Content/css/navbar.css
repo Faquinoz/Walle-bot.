@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+}
+
+:root{
+    --body-color: #C3C3C3;
+    --navbar-color: #FFF;
+    --primary-color: #1A0079;
+    --primary-color-light: #F6F5FF;
+    --btn-color: #DDD;
+    --text-color: #707070;
+    --text-color1: #000;
+    --border: .1rem solid rgba(0, 0, 0, .2);
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+    --tran-06: width 0.3s ease-in-out;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    background: var(--body-color);
+    transition: var(--tran-05);
+}
+
+/*--------------------------- MENU SUPERIOR ---------------------------*/
+.header-top{
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-left: 30px;
+    margin-top: 30px;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.header-top .header{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 2rem;
+}
+
+.header-top .header .profile{
+    width: 14rem;
+    height: 16em;
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    background-color: var(--navbar-color);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: .2s liner;
+}
+
+.flex-btn{
+    display: flex;
+    margin-left: auto;
+}
+
+.header-top .header .icons div{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    background-color: var(--navbar-color);
+    border-radius: .5rem;
+    line-height: 2.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header-top .header .icons div:hover{
+    background-color: var(--text-color);
+    color: var(--navbar-color);
+}
+
+.header-top .header .profile.active{
+    transform: scale(1);
+}
+
+.header-top .header .profile .img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.header-top .header .profile .usuario{
+    font-size: 25px;
+}
+
+.header-top .header .profile .rol{
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+/*--------------------------- BUTTON RESPONSIVE LATERAL ---------------------------*/
+.btn,
+.option-btn{
+    width: 100%;
+    border-radius: .5rem;
+    color: var(--navbar-color);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 5px;
+    display: block;
+    text-decoration: none;
+}
+
+.btn{
+    background-color: var(--text-color);
+}
+
+.option-btn{
+    background-color: var(--primary-color);
+    margin: 5px;
+}
+
+.btn:hover,
+.option-btn:hover{
+    background-color: var(--text-color1);
+    color: var(--navbar-color);
+}
+
+/*--------------------------- MENU LATERAL ---------------------------*/
+.navbar{
+    width: 220px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 14px;
+    background: var(--navbar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+.navbar .text-name,
+.navbar .text{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--tran-04);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.navbar .text-name{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.navbar .image{
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li{
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li .icon{
+    min-width: 60px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li .icon,
+.navbar li .text{
+    color: var(--text-color);
+}
+
+.navbar header{
+    position: relative;
+}
+
+.navbar .logo img{
+    width: 40px;
+}
+
+.navbar header .logo{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .line{
+    width: 90%;
+    height: 4px;
+    background: var(--text-color1);
+    margin: 10px 0;
+}
+
+.navbar header .btn_resp{
+    width: 25px;
+    height: 25px;
+    background: var(--primary-color);
+    position: absolute;
+    top: 44%;
+    right: -25px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--navbar-color);
+}
+
+.navbar li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    transition: var(--tran-04);
+}
+
+.navbar li a:hover .icon,
+.navbar li a:hover .text{
+    color: var(--navbar-color);
+}
+
+.navbar li a:hover::before{
+    width: 206px;
+}
+
+.navbar.close li a:hover::before{
+    width: 75px;
+}
+
+.navbar li a::before{
+    width: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+    z-index: -1;
+    transition: var(--tran-06);
+}
+
+.navbar .navbar-lateral{
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*--------------------------- CIERRE LATERAL ---------------------------*/
+.navbar.close{
+    width: 88px;
+}
+
+.navbar.close ~ .contenido{
+    width: calc(100% - 88px);
+    left: 88px;
+}
+
+.navbar.close .text,
+.navbar.close .text-name{
+    opacity: 0;
+}
+
+.navbar.close header .btn_resp{
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/*--------------------------- IFRAME ---------------------------*/
+.contenido{
+    width: calc(100% - 220px);
+    height: 100vh;
+    position: relative;
+    left: 220px;
+    transition: var(--tran-05);
+}
