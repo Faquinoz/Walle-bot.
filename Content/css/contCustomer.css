@@ -425,7 +425,7 @@ body{
     margin-top: 9px;
 }
 
-#dropdownVisual1{
+#dropdownVisual1, #dropdownVisual2, #dropdownVisual3, #dropdownVisual4{
     display: none;
 }
 
