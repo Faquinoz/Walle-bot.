@@ -6,16 +6,36 @@ const body = document.querySelector("body"),
 
 
 
-document.querySelectorAll('.session-btn').forEach((button, index) => {
+document.querySelectorAll('.btnd').forEach((button, index) => {
     button.addEventListener('click', function () {
-        const dropdown = document.getElementById(`dropdownVisual${index + 1}`);
-        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-            dropdown.style.display = 'block';
+        // Obtener todos los botones y cajas
+        const todosBotones = document.querySelectorAll('.btnd');
+        const todasCajas = document.querySelectorAll('.caja');
+
+        // Cerrar todas las cajas y resetear los estilos de los botones
+        todasCajas.forEach((caja, cajaIndex) => {
+            if (cajaIndex !== index) {
+                caja.style.display = 'none';  // Cerrar cajas diferentes
+                todosBotones[cajaIndex].style.backgroundColor = '';  // Resetear color de botones
+            }
+        });
+
+        // Obtener la caja y el botón correspondiente al clicado
+        const desplegable = document.querySelectorAll('.desplegable')[index];
+        const caja = desplegable.querySelector('.caja');
+        const botonActual = todosBotones[index];  // Botón actual
+
+        // Alternar la caja actual (mostrar/ocultar) y cambiar color del botón
+        if (caja.style.display === 'none' || caja.style.display === '') {
+            caja.style.display = 'block';  // Mostrar la caja si está oculta
+            botonActual.style.backgroundColor = '#88949f';  // Cambiar color del botón a gris
         } else {
-            dropdown.style.display = 'none';
+            caja.style.display = 'none';  // Ocultar la caja si está visible
+            botonActual.style.backgroundColor = '';  // Resetear color del botón
         }
     });
 });
+
 
 
 /* ---------------------------- NAVBAR ---------------------------- */
