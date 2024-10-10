@@ -415,13 +415,14 @@ body {
 }
 
 .font {
-    width: 2289px;
+    width: 1789px;
     height: 802px;
     display: flex;
     padding-top: 90px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("../../Content/Img/wallpaper\ walle.jpg");
-
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .info_grande {

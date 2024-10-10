@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const botones = {
         'btn-home': '../../Page/Components/resources_Customer/Home.html',
         'btn-shop': '../../Page/Components/resources_Customer/Shop.html',
-        'btn-course': '../../Page/Components/resources_Customer/Course.html'
+        'btn-course': '../../Page/Components/resources_Customer/Course-Information.html'
     };
 
     Object.keys(botones).forEach(btn => {
