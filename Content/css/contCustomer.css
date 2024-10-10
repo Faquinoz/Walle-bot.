@@ -1,9 +1,7 @@
-html,
 body {
-    height: 100%;
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     cursor: default;
+    overflow-x: hidden;
 }
 
 /* ------------------- INCIO ------------------- */
@@ -69,12 +67,11 @@ body {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* ------------------- MIS LOGROS  ------------------- */
+/* ------------------- MIS CURSOS  ------------------- */
 #Panel-Course-General h1 {
     text-align: center;
     padding: 20px;
     margin: 0;
-
 }
 
 #Panel-Course {
@@ -183,6 +180,7 @@ body {
 #card:hover .back {
     transform: perspective(600px) rotateY(360deg);
 }
+
 
 /* ------------------- TIENDA ------------------- */
 #Panel-Shop-Customer,
@@ -389,23 +387,25 @@ body {
 }
 
 /* ------------------- Informacion Curso ------------------- */
+.fondofondo {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Content/Img/wallpaper walle.jpg") no-repeat center/cover;
+    cursor: default;
+}
+
 .enca {
-    width: 1789px;
+    width: 1768px;
     height: 150px;
     background-color: #2b2b31;
-    background-repeat: no-repeat;
     padding-left: 500px;
     display: flex;
-
 }
 
 .enca #logoc {
     width: 75px;
     height: 75px;
-    margin-top: 30px;
-    margin-right: 120px;
-
-
+    margin: 30px 120px 0 0;
 }
 
 .enca #nombre_cur {
@@ -419,25 +419,18 @@ body {
     height: 802px;
     display: flex;
     padding-top: 90px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("../../Content/Img/wallpaper\ walle.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .info_grande {
     width: 680px;
     height: 640px;
-    display: block;
     margin-left: 120px;
-
 }
 
 .video_presentacion {
-
     width: 590px;
     height: 320px;
-    margin-left: 30px;
+    margin-left: 45px;
     background-color: #ffffff;
 }
 
@@ -447,33 +440,25 @@ body {
     display: flex;
 }
 
-.Info_pro {
+.Info_pro,
+.dato {
     width: 280px;
     height: 255px;
-    background: rgb(250, 250, 250);
     border-radius: 5px;
-    margin-right: 30px;
-    margin-left: 30px;
     border: 1.9px solid black;
-    display: block;
-    margin-top: 20px;
-
+    margin: 20px 30px 0;
+    background: rgb(250, 250, 250);
 }
 
-.Info_pro .encabezado {
-    padding-top: 15px;
-    padding-left: 60px;
-
-}
-
-.Info_pro .encabezado #prof {
-    font-size: 18px;
+.Info_pro .encabezado,
+.dato .encabezado {
+    padding: 15px 60px 0;
 }
 
 .Info_pro .arribai {
     display: flex;
     align-items: center;
-    padding: 10px 10px;
+    padding: 10px;
 }
 
 .arribai #yehinner {
@@ -491,31 +476,10 @@ body {
 
 .medioi #Detalles {
     margin-bottom: 13px;
-
 }
 
 .medioi #curso {
-    margin: 20px 20px;
-    font-size: 20px;
-
-}
-
-.dato {
-    width: 280px;
-    height: 255px;
-    padding: 20px 10px;
-    margin-top: 20px;
-    border-radius: 5px;
-    border: 1.5px solid black;
-    display: block;
-    background: white;
-}
-
-.dato .encabezado {
-    margin-bottom: 20px;
-}
-
-.encabezado #tit_cur {
+    margin: 20px;
     font-size: 20px;
 }
 
@@ -531,9 +495,10 @@ body {
     padding: 20px;
     background: white;
     border-radius: 5px;
+    border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 400ms ease;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .btnd:hover {
@@ -546,30 +511,21 @@ body {
     width: 758px;
     height: 130px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: -18px 0 20px;
     background: white;
     border-radius: 5px;
     border: 2px solid black;
     display: none;
 }
 
-#clases {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-
-}
-
+#clases,
 #tarea {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
     border-radius: 5px;
-    padding: 10px 10px;
-
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 /*------------Video curso-----------*/
@@ -579,65 +535,68 @@ body {
     display: flex;
 }
 
+.info_vid {
+    display: block;
+    margin: 40px 0 0 90px;
+}
+
 .video {
     height: 700px;
     width: 1010px;
-    margin-left: 60px;
-    margin-top: 60px;
     background-color: #000;
-    display: flex;
 }
 
 .video #vid_provicional {
     height: 680px;
     width: 990px;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin: 10px 0 0 10px;
 }
 
 .mensajeria {
     height: 700px;
     width: 500px;
-    border-radius: 5px;
-    margin-left: 90px;
-    margin-top: 60px;
+    margin: 60px 0 0 90px;
     border: 1.9px solid black;
+    border-radius: 5px;
     display: block;
 }
 
-.mensajeria #descripcion {
+.mensajeria #descripcion,
+.mensajeria #mensaje {
     width: 480px;
-    height: 110px;
-    margin: 14px 10px;
     border-radius: 5px;
+    margin: 10px 10px;
+
+}
+
+.mensajeria #mensaje {
+    border: 1.9px solid black;
+    background-color: #FFF;
+}
+
+.mensajeria #descripcion {
+    height: 110px;
     padding: 2px 10px;
 }
 
 .mensajeria #cuerpom {
     width: 480px;
-    height: 255px;
-    border-radius: 5px;
+    height: 510px;
     margin: 10px 10px;
-    border: 1.9px solid black;
     padding: 30px 40px;
+    border-radius: 5px;
+    border: 1.9px solid black;
     background-color: #FFF;
 }
 
 .mensajeria #mensaje {
-    width: 480px;
     height: 35px;
-    margin: 10px 10px;
-    border: 1.9px solid black;
-    border-radius: 5px;
-    padding-left: 20px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    background-color: #FFF;
+    padding: 5px 5px;
 }
 
 input[type="text"] {
     border: none;
-    margin-right: 240px;
+    margin-right: 256px;
 }
 
 input[type="submit"] {
@@ -645,11 +604,13 @@ input[type="submit"] {
     height: 25px;
     border-radius: 5px;
     border: 0.5px solid black;
+    transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
     background-color: #7a7a7a;
 }
+
 
 /* ------------------- Extras ------------------- */
 .Panel-General-Server .Opc {
